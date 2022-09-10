@@ -11,6 +11,7 @@
         android:id="@+id/highContainer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/num_recognition_container"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,6 +22,7 @@
             android:id="@+id/rjdLogo"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginTop="5dp"
             android:contentDescription="@string/rjd_logo_text_res"
             android:src="@drawable/rjd_long"
             tools:ignore="MissingConstraints" />
@@ -41,68 +43,81 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/highContainer">
 
-        <LinearLayout
-            android:id="@+id/choose_container"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            tools:ignore="MissingConstraints">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="211dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2dp"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <ImageView
                     android:id="@+id/chooseFromGallery"
                     android:layout_width="match_parent"
-                    android:layout_height="169dp"
+                    android:layout_height="170dp"
                     app:srcCompat="@drawable/ic_baseline_image_24" />
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
                     android:text="@string/load_text_res"
                     android:textAlignment="center"
-                    android:textColor="#C3151C" />
+                    android:textColor="#C3151C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chooseFromGallery" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout3">
 
                 <ImageView
                     android:id="@+id/makeImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="220dp"
+                    android:layout_height="170dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
 
                 <TextView
+                    android:id="@+id/textView2"
                     android:layout_width="match_parent"
-                    android:layout_height="31dp"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
                     android:text="@string/make_image_text_res"
                     android:textAlignment="center"
-                    android:textColor="#C3151C" />
+                    android:textColor="#C3151C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/makeImage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
+            <TextView
+                android:id="@+id/result_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/rjd_theme"
+                android:textSize="34sp"
+                tools:layout_editor_absoluteY="200dp" />
 
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/resultImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/result_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="@color/rjd_theme"
-            android:textSize="34sp" />
+            <ImageView
+                android:id="@+id/resultImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteY="200dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
@@ -110,6 +125,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num_recognition_container">
 
         <ImageView
@@ -119,6 +135,8 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="100dp"
+            android:layout_marginBottom="31dp"
+            app:layout_constraintBottom_toTopOf="@+id/resultDefect"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
