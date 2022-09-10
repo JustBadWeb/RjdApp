@@ -1,0 +1,6 @@
+<resources>
+    <string name="rjd_app_name" translatable="false">RJD RECOGNITION</string>
+    <string name="rjd_logo_text_res">RJD logo</string>
+    <string name="load_text_res">Загрузить фото из галереи</string>
+    <string name="make_image_text_res">Сделать снимок</string>
+</resources>

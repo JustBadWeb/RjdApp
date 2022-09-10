@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "app.rjd"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    // If you find lint problem like:
+    // * What went wrong:
+    // A problem was found with the configuration of task ':app:lint'.
+    // > No value has been specified for property 'lintClassPath'.
+    //
+    // Probably you haven't set ANDROID_HOME. To fix:
+    // export ANDROID_HOME=$HOME/Android/Sdk   # Your Android SDK path.
+    lintOptions {
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+// App assets folder:
+project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
+
+// Download TF Lite model.
+apply from: 'download.gradle'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.guava:guava:28.2-android'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.10'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+}
