@@ -3,8 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/drawable-nodpi/_ellipse_3_ek2_shape.xml" value="0.157" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/drawable-nodpi/_reset_substrate_ek2_shape.xml" value="0.1" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/drawable-nodpi/ellipse_3_ek1_shape.xml" value="0.157" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/drawable-nodpi/ellipse_3_shape.xml" value="0.157" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/drawable-nodpi/menu_substrate_ek1_shape.xml" value="0.157" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/drawable-nodpi/tools_substrate_ek1_shape.xml" value="0.157" />
         <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.2085" />
         <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/layout/rjd_activity_main.xml" value="0.23505434782608695" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/layout/rjd_activity_main_new_design.xml" value="0.23505434782608695" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/layout/rjd_new_design.xml" value="0.72" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/layout/screen_1.xml" value="0.1" />
+        <entry key="..\:/Programming/AndroidProjects/RJD/app/src/main/res/layout/screen_2.xml" value="0.1" />
         <entry key="..\:/Programming/AndroidProjects/android/app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.124" />
         <entry key="..\:/Programming/AndroidProjects/android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.234" />
         <entry key="..\:/Programming/AndroidProjects/android/app/src/main/res/layout/rjd_activity_main.xml" value="0.2" />
