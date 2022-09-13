@@ -15,12 +15,12 @@
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/menuGroup"
 		android:layout_width="0dp"
-		android:layout_height="0dp"
+		android:layout_height="120dp"
 		app:layout_constraintBottom_toTopOf="@+id/inputGroup"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent">
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_chainStyle="spread">
 
 		<View
 			android:id="@+id/menu_back"
@@ -29,7 +29,6 @@
 			android:layout_marginStart="-10dp"
 			android:layout_marginTop="-22dp"
 			android:layout_marginEnd="-10dp"
-			android:layout_marginBottom="32dp"
 			android:background="@drawable/menu_substrate"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
@@ -51,86 +50,185 @@
 		<ImageButton
 			android:id="@+id/sendButton"
 			style="@android:style/Widget.Holo.ImageButton"
-			android:layout_width="80dp"
-			android:layout_height="80dp"
+			android:layout_width="70dp"
+			android:layout_height="70dp"
 			android:layout_marginEnd="16dp"
 			android:background="@null"
 			android:scaleType="fitCenter"
 			app:layout_constraintBottom_toBottomOf="@+id/menu_back"
 			app:layout_constraintEnd_toStartOf="@+id/resetButton"
 			app:layout_constraintTop_toTopOf="parent"
-			app:srcCompat="@mipmap/send_button" />
+			app:srcCompat="@mipmap/send_button"
+			tools:ignore="SpeakableTextPresentCheck" />
 
 		<ImageButton
 			android:id="@+id/resetButton"
 			style="@style/Widget.AppCompat.ImageButton"
-			android:layout_width="80dp"
-			android:layout_height="80dp"
+			android:layout_width="70dp"
+			android:layout_height="70dp"
 			android:layout_marginEnd="24dp"
 			android:background="@null"
 			android:scaleType="fitCenter"
 			app:layout_constraintBottom_toBottomOf="@+id/menu_back"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintTop_toTopOf="parent"
-			app:srcCompat="@mipmap/reset_button" />
+			app:srcCompat="@mipmap/reset_button"
+			tools:ignore="SpeakableTextPresentCheck" />
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/inputGroup"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_height="0dp"
+		android:layout_marginTop="16dp"
+		android:layout_marginBottom="16dp"
 		app:layout_constraintBottom_toTopOf="@+id/toolsGroup"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/menuGroup">
 
-		<RelativeLayout
-			android:id="@+id/image_group"
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/imageGroup"
 			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_marginStart="32dp"
-			android:layout_marginEnd="32dp"
-			android:layout_marginBottom="16dp"
-			app:layout_constraintBottom_toTopOf="@+id/text_group"
+			android:layout_height="0dp"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="16dp"
+			android:layout_marginBottom="8dp"
+			app:layout_constraintBottom_toTopOf="@+id/textGroup"
 			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent">
 
+			<ImageView
+				android:id="@+id/inputBackgroundNumber"
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:layout_marginStart="16dp"
+				android:layout_marginTop="8dp"
+				android:layout_marginEnd="16dp"
+				android:layout_marginBottom="8dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:srcCompat="@drawable/white_substrate" />
 
 			<ImageView
-				android:id="@+id/inputBackground1"
-				android:layout_width="match_parent"
-				android:layout_height="200dp"
-				app:srcCompat="@drawable/white_substrate" />
-		</RelativeLayout>
+				android:id="@+id/grayCameraIcon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="120dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.5"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:srcCompat="@drawable/input_gallery_icon" />
 
-		<RelativeLayout
-			android:id="@+id/text_group"
+			<ImageView
+				android:id="@+id/grayGalleryIcon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="116dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.5"
+				app:layout_constraintHorizontal_chainStyle="spread_inside"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:srcCompat="@drawable/input_gallery_icon" />
+
+			<ImageButton
+				android:id="@+id/deleteTextNumber"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:background="@null"
+				android:scaleType="fitCenter"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:srcCompat="@mipmap/text_delete_button"
+				tools:ignore="SpeakableTextPresentCheck" />
+
+			<ImageButton
+				android:id="@+id/changeTextNumber"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:background="@null"
+				android:scaleType="fitCenter"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:srcCompat="@mipmap/text_edit_button"
+				tools:ignore="SpeakableTextPresentCheck" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/textGroup"
 			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_marginStart="32dp"
-			android:layout_marginTop="8dp"
-			android:layout_marginEnd="32dp"
+			android:layout_height="0dp"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="16dp"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/image_group">
+			app:layout_constraintTop_toBottomOf="@+id/imageGroup">
 
 			<ImageView
-				android:id="@+id/inputBackground2"
-				android:layout_width="match_parent"
-				android:layout_height="200dp"
+				android:id="@+id/inputBackgroundVoice"
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:layout_marginStart="16dp"
+				android:layout_marginTop="8dp"
+				android:layout_marginEnd="16dp"
+				android:layout_marginBottom="8dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
 				app:srcCompat="@drawable/white_substrate" />
-		</RelativeLayout>
+
+			<ImageView
+				android:id="@+id/grayTextIcon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:srcCompat="@drawable/input_text_icon" />
+
+			<ImageButton
+				android:id="@+id/deleteTextVoice"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:background="@null"
+				android:scaleType="fitCenter"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:srcCompat="@mipmap/text_delete_button"
+				tools:ignore="SpeakableTextPresentCheck" />
+
+			<ImageButton
+				android:id="@+id/changeTextVoice"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:background="@null"
+				android:scaleType="fitCenter"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:srcCompat="@mipmap/text_edit_button"
+				tools:ignore="SpeakableTextPresentCheck" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/toolsGroup"
 		android:layout_width="0dp"
-		android:layout_height="0dp"
+		android:layout_height="140dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
@@ -142,7 +240,6 @@
 			android:layout_width="0dp"
 			android:layout_height="0dp"
 			android:layout_marginStart="-10dp"
-			android:layout_marginTop="20dp"
 			android:layout_marginEnd="-10dp"
 			android:layout_marginBottom="-22dp"
 			android:background="@drawable/tools_substrate"
@@ -167,7 +264,8 @@
 			app:layout_constraintHorizontal_chainStyle="spread"
 			app:layout_constraintStart_toEndOf="@+id/tools_back"
 			app:layout_constraintTop_toTopOf="@+id/tools_back"
-			app:srcCompat="@mipmap/gallery_button" />
+			app:srcCompat="@mipmap/gallery_button"
+			tools:ignore="SpeakableTextPresentCheck" />
 
 		<ImageButton
 			android:id="@+id/fromCamera"
@@ -182,7 +280,8 @@
 			app:layout_constraintHorizontal_chainStyle="spread"
 			app:layout_constraintStart_toEndOf="@+id/fromGallery"
 			app:layout_constraintTop_toTopOf="@+id/tools_back"
-			app:srcCompat="@mipmap/photo_button" />
+			app:srcCompat="@mipmap/photo_button"
+			tools:ignore="SpeakableTextPresentCheck" />
 
 		<ImageButton
 			android:id="@+id/recordVoice"
@@ -197,7 +296,8 @@
 			app:layout_constraintHorizontal_chainStyle="spread"
 			app:layout_constraintStart_toEndOf="@+id/fromCamera"
 			app:layout_constraintTop_toTopOf="@+id/tools_back"
-			app:srcCompat="@mipmap/record_button" />
+			app:srcCompat="@mipmap/record_button"
+			tools:ignore="SpeakableTextPresentCheck" />
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 

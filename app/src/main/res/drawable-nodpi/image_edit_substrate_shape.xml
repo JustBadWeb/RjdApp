@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- image_edit_substrate from your XD file. -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-	android:shape="oval" >
-	<solid android:color="@color/photo_substrate__color" />
-</shape>
-
