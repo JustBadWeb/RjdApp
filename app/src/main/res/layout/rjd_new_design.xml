@@ -4,21 +4,6 @@
 	android:id="@+id/mainView"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content">
-	<!--
-    /*
-     *	This content is generated from the API File Info.
-     *	(Alt+Shift+Ctrl+I).
-     *
-     *	@desc
-     *	@file 		screen_2
-     *	@date 		Monday 12th of September 2022 08:16:25 AM
-     *	@title 		Page 1
-     *	@author
-     *	@keywords
-     *	@generator 	Export Kit v1.3.figma
-     *
-     */
-    -->
 
 	<View
 		android:id="@+id/background"
@@ -29,10 +14,11 @@
 
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/menuGroup"
-		android:layout_width="match_parent"
+		android:layout_width="0dp"
 		android:layout_height="0dp"
-		app:layout_constraintBottom_toTopOf="@+id/input_group"
+		app:layout_constraintBottom_toTopOf="@+id/inputGroup"
 		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent">
 
@@ -43,279 +29,113 @@
 			android:layout_marginStart="-10dp"
 			android:layout_marginTop="-22dp"
 			android:layout_marginEnd="-10dp"
-			android:layout_marginBottom="10dp"
+			android:layout_marginBottom="32dp"
 			android:background="@drawable/menu_substrate"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintHorizontal_bias="1.0"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintVertical_bias="0.0" />
+			app:layout_constraintVertical_bias="1.0" />
 
 		<ImageView
 			android:id="@+id/symbol"
-			android:layout_width="113dp"
-			android:layout_height="49dp"
+			android:layout_width="120dp"
+			android:layout_height="50dp"
 			android:layout_marginStart="8dp"
-			android:contentDescription="symbol"
 			android:src="@drawable/symbol"
-			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintBottom_toBottomOf="@+id/menu_back"
 			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintVertical_bias="0.25" />
+			app:layout_constraintTop_toTopOf="parent" />
 
-		<LinearLayout
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal"
-			android:padding="10dp"
+		<ImageButton
+			android:id="@+id/sendButton"
+			style="@android:style/Widget.Holo.ImageButton"
+			android:layout_width="80dp"
+			android:layout_height="80dp"
+			android:layout_marginEnd="16dp"
+			android:background="@null"
+			android:scaleType="fitCenter"
+			app:layout_constraintBottom_toBottomOf="@+id/menu_back"
+			app:layout_constraintEnd_toStartOf="@+id/resetButton"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@mipmap/send_button" />
+
+		<ImageButton
+			android:id="@+id/resetButton"
+			style="@style/Widget.AppCompat.ImageButton"
+			android:layout_width="80dp"
+			android:layout_height="80dp"
+			android:layout_marginEnd="24dp"
+			android:background="@null"
+			android:scaleType="fitCenter"
 			app:layout_constraintBottom_toBottomOf="@+id/menu_back"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintStart_toEndOf="@+id/symbol"
 			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintVertical_bias="0.2">
-
-			<ImageButton
-				android:id="@+id/resetButton"
-				style="@android:style/Widget.Holo.ImageButton"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_margin="3dp"
-				app:srcCompat="@mipmap/reset_button" />
-
-			<ImageButton
-				android:id="@+id/sendButton"
-				style="@android:style/Widget.Holo.ImageButton"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_margin="3dp"
-				app:srcCompat="@mipmap/send_button" />
-		</LinearLayout>
+			app:srcCompat="@mipmap/reset_button" />
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 
-	<RelativeLayout
-		android:id="@+id/input_group"
-		android:layout_width="wrap_content"
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/inputGroup"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
-		app:layout_constraintBottom_toTopOf="@id/toolsGroup"
+		app:layout_constraintBottom_toTopOf="@+id/toolsGroup"
 		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/menuGroup">
-
-
-		<RelativeLayout
-			android:id="@+id/text_group"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginStart="5dp"
-			android:layout_marginTop="222dp">
-
-			<View
-				android:id="@+id/text_substrate"
-				android:layout_width="324dp"
-				android:layout_height="186dp"
-				android:layout_marginStart="7dp"
-				android:layout_marginTop="0dp"
-				android:background="@drawable/text_substrate_shape" />
-
-			<ImageView
-				android:id="@+id/input_text_icon"
-				android:layout_width="55dp"
-				android:layout_height="40dp"
-				android:layout_marginStart="141dp"
-				android:layout_marginTop="73dp"
-				android:contentDescription="input_text_icon"
-				android:src="@drawable/input_text_icon" />
-
-
-			<RelativeLayout
-				android:id="@+id/text_edit_button"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="305dp"
-				android:layout_marginTop="163dp">
-
-				<View
-					android:id="@+id/text_edit_substrate"
-					android:layout_width="33dp"
-					android:layout_height="33dp"
-					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp"
-					android:background="@drawable/text_edit_substrate_shape" />
-
-
-				<RelativeLayout
-					android:id="@+id/text_edit_icon"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="3dp"
-					android:layout_marginTop="3dp">
-
-					<ImageView
-						android:id="@+id/vector_ek1"
-						android:layout_width="23.93dp"
-						android:layout_height="15.23dp"
-						android:layout_marginStart="1.09dp"
-						android:layout_marginTop="5.44dp"
-						android:contentDescription="vector_ek1"
-						android:src="@drawable/vector_ek1" />
-
-				</RelativeLayout>
-
-			</RelativeLayout>
-
-
-			<RelativeLayout
-				android:id="@+id/text_delete_button"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="0dp"
-				android:layout_marginTop="162dp">
-
-				<View
-					android:id="@+id/text_delete_substrate"
-					android:layout_width="31dp"
-					android:layout_height="31dp"
-					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp"
-					android:background="@drawable/text_delete_substrate_shape" />
-
-
-				<RelativeLayout
-					android:id="@+id/text_delete_icon"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="2dp"
-					android:layout_marginTop="1dp">
-
-					<ImageView
-						android:id="@+id/vector_ek2"
-						android:layout_width="20.82dp"
-						android:layout_height="23.13dp"
-						android:layout_marginStart="3.47dp"
-						android:layout_marginTop="2.31dp"
-						android:contentDescription="vector_ek2"
-						android:src="@drawable/vector_ek2" />
-
-				</RelativeLayout>
-
-			</RelativeLayout>
-
-		</RelativeLayout>
-
+		app:layout_constraintTop_toBottomOf="@+id/menuGroup">
 
 		<RelativeLayout
 			android:id="@+id/image_group"
-			android:layout_width="wrap_content"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:layout_marginStart="0dp"
-			android:layout_marginTop="0dp">
+			android:layout_marginStart="32dp"
+			android:layout_marginEnd="32dp"
+			android:layout_marginBottom="16dp"
+			app:layout_constraintBottom_toTopOf="@+id/text_group"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
 
-			<View
-				android:id="@+id/image_substrate"
-				android:layout_width="324dp"
-				android:layout_height="170dp"
-				android:layout_marginStart="13dp"
-				android:layout_marginTop="0dp"
-				android:background="@drawable/image_substrate_shape" />
 
 			<ImageView
-				android:id="@+id/input_gallery_icon"
-				android:layout_width="60dp"
-				android:layout_height="48dp"
-				android:layout_marginStart="99dp"
-				android:layout_marginTop="62dp"
-				android:contentDescription="input_gallery_icon"
-				android:src="@drawable/input_gallery_icon" />
-
-
-			<RelativeLayout
-				android:id="@+id/image_edit_button_"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="311dp"
-				android:layout_marginTop="148dp">
-
-				<View
-					android:id="@+id/image_edit_substrate"
-					android:layout_width="33dp"
-					android:layout_height="33dp"
-					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp"
-					android:background="@drawable/image_edit_substrate_shape" />
-
-
-				<RelativeLayout
-					android:id="@+id/image_edit_icon"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="3dp"
-					android:layout_marginTop="3dp">
-
-					<ImageView
-						android:id="@+id/vector_ek4"
-						android:layout_width="23.93dp"
-						android:layout_height="15.23dp"
-						android:layout_marginStart="1.09dp"
-						android:layout_marginTop="5.44dp"
-						android:contentDescription="vector_ek4"
-						android:src="@drawable/vector_ek4" />
-
-				</RelativeLayout>
-
-			</RelativeLayout>
-
-
-			<RelativeLayout
-				android:id="@+id/image_delete_button"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="0dp"
-				android:layout_marginTop="147dp">
-
-				<View
-					android:id="@+id/ellipse_3"
-					android:layout_width="31dp"
-					android:layout_height="31dp"
-					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp"
-					android:background="@drawable/ellipse_3_shape" />
-
-
-				<RelativeLayout
-					android:id="@+id/image_delete_icon"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="2dp"
-					android:layout_marginTop="1dp">
-
-					<ImageView
-						android:id="@+id/vector_ek5"
-						android:layout_width="20.82dp"
-						android:layout_height="23.13dp"
-						android:layout_marginStart="3.47dp"
-						android:layout_marginTop="2.31dp"
-						android:contentDescription="vector_ek5"
-						android:src="@drawable/vector_ek5" />
-
-				</RelativeLayout>
-
-			</RelativeLayout>
-
+				android:id="@+id/inputBackground1"
+				android:layout_width="match_parent"
+				android:layout_height="200dp"
+				app:srcCompat="@drawable/white_substrate" />
 		</RelativeLayout>
 
-	</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/text_group"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="32dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="32dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/image_group">
+
+			<ImageView
+				android:id="@+id/inputBackground2"
+				android:layout_width="match_parent"
+				android:layout_height="200dp"
+				app:srcCompat="@drawable/white_substrate" />
+		</RelativeLayout>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
 
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/toolsGroup"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
-		app:layout_constraintBottom_toBottomOf="@id/background"
+		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/input_group">
+		app:layout_constraintTop_toBottomOf="@+id/inputGroup">
 
 		<View
 			android:id="@+id/tools_back"
@@ -333,74 +153,52 @@
 			app:layout_constraintTop_toTopOf="parent"
 			app:layout_constraintVertical_bias="1.0" />
 
-		<RelativeLayout
-			android:id="@+id/gallery_button"
-			android:layout_width="wrap_content"
+		<ImageButton
+			android:id="@+id/fromGallery"
+			android:layout_width="96dp"
 			android:layout_height="wrap_content"
-			app:layout_constraintTop_toTopOf="parent"
-			tools:layout_editor_absoluteX="101dp">
+			android:layout_margin="5dp"
+			android:layout_marginBottom="48dp"
+			android:background="@null"
+			android:scaleType="fitCenter"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@+id/fromCamera"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="spread"
+			app:layout_constraintStart_toEndOf="@+id/tools_back"
+			app:layout_constraintTop_toTopOf="@+id/tools_back"
+			app:srcCompat="@mipmap/gallery_button" />
 
-		</RelativeLayout>
-
-		<RelativeLayout
-			android:id="@+id/photo_button"
-			android:layout_width="wrap_content"
+		<ImageButton
+			android:id="@+id/fromCamera"
+			android:layout_width="96dp"
 			android:layout_height="wrap_content"
-			app:layout_constraintTop_toTopOf="parent"
-			tools:layout_editor_absoluteX="213dp">
+			android:layout_margin="5dp"
+			android:background="@null"
+			android:scaleType="fitCenter"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@+id/recordVoice"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="spread"
+			app:layout_constraintStart_toEndOf="@+id/fromGallery"
+			app:layout_constraintTop_toTopOf="@+id/tools_back"
+			app:srcCompat="@mipmap/photo_button" />
 
-		</RelativeLayout>
+		<ImageButton
+			android:id="@+id/recordVoice"
+			android:layout_width="96dp"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp"
+			android:background="@null"
+			android:scaleType="fitCenter"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@+id/tools_back"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="spread"
+			app:layout_constraintStart_toEndOf="@+id/fromCamera"
+			app:layout_constraintTop_toTopOf="@+id/tools_back"
+			app:srcCompat="@mipmap/record_button" />
 
-		<View
-			android:id="@+id/gallery_substrate"
-			android:layout_width="81dp"
-			android:layout_height="81dp"
-			android:background="@drawable/gallery_substrate_shape"
-			tools:layout_editor_absoluteX="84dp"
-			tools:layout_editor_absoluteY="73dp" />
-
-		<View
-			android:id="@+id/photo_substrate_"
-			android:layout_width="81dp"
-			android:layout_height="81dp"
-			android:background="@drawable/photo_substrate__shape"
-			tools:layout_editor_absoluteX="210dp"
-			tools:layout_editor_absoluteY="96dp" />
-
-		<ImageView
-			android:id="@+id/photo_icon"
-			android:layout_width="50.22dp"
-			android:layout_height="50.22dp"
-			android:contentDescription="photo_icon"
-			android:src="@drawable/photo_icon"
-			tools:layout_editor_absoluteX="228dp"
-			tools:layout_editor_absoluteY="112dp" />
-
-		<ImageView
-			android:id="@+id/gallery_icon"
-			android:layout_width="50.22dp"
-			android:layout_height="50.22dp"
-			android:contentDescription="gallery_icon"
-			android:src="@drawable/gallery_icon"
-			tools:layout_editor_absoluteX="97dp"
-			tools:layout_editor_absoluteY="88dp" />
-
-		<View
-			android:id="@+id/_record_substrate"
-			android:layout_width="82dp"
-			android:layout_height="82dp"
-			android:background="@drawable/_record_substrate_shape"
-			tools:layout_editor_absoluteX="344dp"
-			tools:layout_editor_absoluteY="78dp" />
-
-		<ImageView
-			android:id="@+id/vector"
-			android:layout_width="35.33dp"
-			android:layout_height="46.75dp"
-			android:contentDescription="vector"
-			android:src="@drawable/vector"
-			tools:layout_editor_absoluteX="379dp"
-			tools:layout_editor_absoluteY="102dp" />
 	</androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
